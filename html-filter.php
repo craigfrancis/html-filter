@@ -3,7 +3,6 @@
 	class html_filter {
 
 		protected $config = array();
-		protected $nodes = array();
 		protected $errors = array();
 		protected $dom_src = NULL;
 		protected $dom_dst = NULL;
