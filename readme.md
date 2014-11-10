@@ -1,7 +1,7 @@
 
 # HTML Filter
 
-A very basic HTML filter, using the DOMDocument in PHP to parse the HTML via the [loadHTML](http://php.net/manual/en/domdocument.loadhtml.php)() method.
+A very basic HTML filter, using the DOMDocument in PHP to parse the HTML via [loadHTML](http://php.net/manual/en/domdocument.loadhtml.php)().
 
 It then simply creates a new DOMDocument by only copying across the nodes and attributes which are recognised.
 
