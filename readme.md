@@ -3,6 +3,6 @@
 
 A very basic PHP based HTML filter, using [DOMDocument::loadHTML](http://php.net/manual/en/domdocument.loadhtml.php) to parse the HTML.
 
-It then simply creates a new DOMDocument by only copying across the nodes and attributes which are recognised / trusted.
+It can then create a new DOMDocument by simply copying across the nodes and attributes which are valid.
 
-This is intended to work with [PHP Prime](http://www.phpprime.com/), when it requires a WYSIWYG editor.
+There are no dependencies, and was built to filter the output from a WYSIWYG editor.
