@@ -4,7 +4,7 @@
 
 	header('Content-Type: text/plain; charset=UTF-8');
 
-	$html = '<div class="xxx">Hello <p class="a">Fish <br> End</div><div><a href="http://example.com" onclick="false"></a>Second</div>';
+	$html = '<div class="xxx">Hello <p class="a">Fish <br> End</div><div><a href="http://example.com" onclick="false">Link</a> Text</div>';
 
 	echo $html . "\n\n";
 

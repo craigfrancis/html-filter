@@ -51,7 +51,7 @@
 
 			foreach ($nodes as $node_name => $node_config) {
 
-				if (!isset($node_config['closing'])) $nodes[$node_name]['closing'] = false;
+				if (!isset($node_config['void'])) $nodes[$node_name]['void'] = false;
 				if (!isset($node_config['children'])) $nodes[$node_name]['children'] = array();
 				if (!isset($node_config['attributes'])) $nodes[$node_name]['attributes'] = array();
 
@@ -108,7 +108,7 @@
 				}
 
 				foreach ($this->config['nodes'] as $node_name => $node_config) {
-					if ($node_config['closing']) {
+					if ($node_config['void']) {
 						$output = str_ireplace('></' . $node_name . '>', ' />', $output);
 					}
 				}
