@@ -9,6 +9,7 @@
 	echo $html . "\n\n";
 
 	$filter = new html_filter();
+	$filter->config_check();
 
 	$html = $filter->process($html);
 

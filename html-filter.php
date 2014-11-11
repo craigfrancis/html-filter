@@ -28,8 +28,6 @@
 					$this->config['nodes'] = $this->node_config_get($this->config['nodes']);
 				}
 
-				$this->config['nodes'] = $this->node_config_clean($this->config['nodes']);
-
 			//--------------------------------------------------
 			// Config: Fallback node
 
@@ -47,22 +45,23 @@
 			return $nodes;
 		}
 
-		private function node_config_clean($nodes) {
+		public function config_check() {
 
-			foreach ($nodes as $node_name => $node_config) {
+			foreach ($this->config['nodes'] as $node_name => $node_config) {
 
-				if (!isset($node_config['void'])) $nodes[$node_name]['void'] = false;
-				if (!isset($node_config['children'])) $nodes[$node_name]['children'] = array();
-				if (!isset($node_config['attributes'])) $nodes[$node_name]['attributes'] = array();
+				if (!array_key_exists('void', $node_config))       exit('The node "' . $node_name . '" is missing the "void" boolean');
+				if (!is_bool($node_config['void']))                exit('The node "' . $node_name . '" has an invalid "void" boolean');
+				if (!array_key_exists('children', $node_config))   exit('The node "' . $node_name . '" is missing the "children" array');
+				if (!is_array($node_config['children']))           exit('The node "' . $node_name . '" has an invalid "children" array');
+				if (!array_key_exists('attributes', $node_config)) exit('The node "' . $node_name . '" is missing the "attributes" array');
+				if (!is_array($node_config['attributes']))         exit('The node "' . $node_name . '" has an invalid "attributes" array');
 
-				foreach ($nodes[$node_name]['attributes'] as $attr_name => $attr_config) {
-					if (!isset($attr_config['type'])) exit('The node "' . $node_name . '" attribute "' . $attr_name . '" type is required.');
-					if (!isset($attr_config['default'])) $nodes[$node_name]['attributes'][$attr_name]['default'] = NULL;
+				foreach ($node_config['attributes'] as $attr_name => $attr_config) {
+					if (!array_key_exists('type', $attr_config))    exit('The node "' . $node_name . '" attribute "' . $attr_name . '" type is required.');
+					if (!array_key_exists('default', $attr_config)) exit('The node "' . $node_name . '" attribute "' . $attr_name . '" default is required.');
 				}
 
 			}
-
-			return $nodes;
 
 		}
 
