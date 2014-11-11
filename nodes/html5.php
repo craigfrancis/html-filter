@@ -419,7 +419,7 @@
 					'attributes' => array(),
 				),
 			'iframe' => array(
-					'void' => true,
+					'void' => false,
 					'children' => array(),
 					'attributes' => array(),
 				),
