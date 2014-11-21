@@ -1,0 +1,621 @@
+html:
+  body, head
+
+head:
+  base, command, link, meta, noscript, script, style, title
+
+body:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+base:
+  N/A
+
+link:
+  N/A
+
+style:
+  N/A
+
+script:
+  N/A
+
+noscript:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+title:
+  #text
+
+meta:
+  N/A
+
+article:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+aside:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+nav:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+section:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+footer:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+dialog:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+div:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+p:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+blockquote:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+address:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+h1:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+h2:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+h3:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+h4:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+h5:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+h6:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+header:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+ol:
+  li
+
+ul:
+  li
+
+li:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+dl:
+  dd, dt
+
+dt:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+dd:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+table:
+  caption, colgroup, tbody, tfoot, thead, tr
+
+caption:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+colgroup:
+  col
+
+col:
+  N/A
+
+thead:
+  tr
+
+tbody:
+  tr
+
+tfoot:
+  tr
+
+tr:
+  td, th
+
+th:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+td:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+form:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+fieldset:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, legend,
+  main, map, mark, math, menu, meter, nav, noscript, object, ol, output, p,
+  pre, progress, q, ruby, s, samp, script, section, select, small, span,
+  strong, sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+legend:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+label:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+input:
+  N/A
+
+keygen:
+  N/A
+
+details:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, summary, sup, svg, table, template, textarea, time, ul, var, video,
+  wbr
+
+command:
+  N/A
+
+summary:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+meter:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+progress:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+select:
+  optgroup, option
+
+optgroup:
+  option
+
+option:
+  #text
+
+datalist:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, option, output, progress,
+  q, ruby, samp, script, select, small, span, strong, sub, sup, svg,
+  textarea, time, var, video, wbr
+
+textarea:
+  #text
+
+button:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+output:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+img:
+  N/A
+
+map:
+  area
+
+area:
+  N/A
+
+audio:
+  source, track
+
+canvas:
+  N/A
+
+svg:
+  N/A
+
+figure:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3,
+  h4, h5, h6, header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen,
+  label, main, map, mark, math, menu, meter, nav, noscript, object, ol,
+  output, p, pre, progress, q, ruby, s, samp, script, section, select, small,
+  span, strong, sub, sup, svg, table, template, textarea, time, ul, var,
+  video, wbr
+
+figcaption:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, i, iframe, img, input, ins, kbd, keygen, label, main,
+  map, mark, math, menu, meter, nav, noscript, object, ol, output, p, pre,
+  progress, q, ruby, s, samp, script, section, select, small, span, strong,
+  sub, sup, svg, table, template, textarea, time, ul, var, video, wbr
+
+video:
+  source, track
+
+object:
+  param
+
+embed:
+  N/A
+
+param:
+  N/A
+
+source:
+  N/A
+
+track:
+  N/A
+
+iframe:
+  N/A
+
+menu:
+  #text, a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote,
+  br, button, canvas, cite, code, command, data, datalist, del, details, dfn,
+  div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6,
+  header, hgroup, hr, hr, i, iframe, img, input, ins, kbd, keygen, label, li,
+  main, map, mark, math, menu, menu, menuitem, meter, nav, noscript, object,
+  ol, output, p, pre, progress, q, ruby, s, samp, script, section, select,
+  small, span, strong, sub, sup, svg, table, template, textarea, time, ul,
+  var, video, wbr
+
+menuitem:
+  N/A
+
+hr:
+  N/A
+
+br:
+  N/A
+
+wbr:
+  N/A
+
+a:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+span:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+abbr:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+cite:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+code:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+dfn:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+em:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+kbd:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+mark:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+q:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+s:
+  #text
+
+small:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+samp:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+strong:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+sub:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+sup:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+time:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+var:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+pre:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+ins:
+  #text
+
+del:
+  #text
+
+u:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+bdi:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+bdo:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+ruby:
+  rp, rt
+
+rp:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+
+rt:
+  #text, a, abbr, audio, b, bdo, br, button, canvas, cite, code, command,
+  datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen,
+  label, map, mark, math, meter, noscript, object, output, progress, q, ruby,
+  samp, script, select, small, span, strong, sub, sup, svg, textarea, time,
+  var, video, wbr
+

@@ -10,7 +10,9 @@
 //--------------------------------------------------
 // Get nodes
 
-	require_once(dirname(__FILE__) . '/html5.php');
+	$mode = 'html5';
+
+	require_once(dirname(__FILE__) . '/' . $mode . '.php');
 
 //--------------------------------------------------
 // Check config
@@ -24,6 +26,8 @@
 //--------------------------------------------------
 // Printout children
 
+	$output = '';
+
 	function list_format($list, $indent = '  ') {
 		$list = implode(', ', $list);
 		$list = wordwrap($list, 75, "\n", false);
@@ -32,8 +36,26 @@
 	}
 
 	foreach ($nodes as $node_name => $node_info) {
-		sort($node_info['children']);
-		echo $node_name . ':' . "\n" . list_format($node_info['children']) . "\n\n";
+		if (is_array($node_info)) {
+
+			sort($node_info['children']);
+
+			if (count($node_info['children']) > 0) {
+				$children = list_format($node_info['children']);
+			} else {
+				$children = '  N/A';
+			}
+
+			$output .= $node_name . ':' . "\n" . $children . "\n\n";
+
+		}
 	}
+
+	echo $output;
+
+//--------------------------------------------------
+// Save
+
+	file_put_contents(dirname(__FILE__) . '/' . $mode . '.txt', $output);
 
 ?>
