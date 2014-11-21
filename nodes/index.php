@@ -7,13 +7,6 @@
 
 	header('Content-Type: text/plain; charset=UTF-8');
 
-	function list_format($list, $indent = '  ') {
-		$list = implode(', ', $list);
-		$list = wordwrap($list, 75, "\n", false);
-		$list = preg_replace('/^/m', $indent, $list);
-		return $list;
-	}
-
 //--------------------------------------------------
 // Get nodes
 
@@ -30,6 +23,13 @@
 
 //--------------------------------------------------
 // Printout children
+
+	function list_format($list, $indent = '  ') {
+		$list = implode(', ', $list);
+		$list = wordwrap($list, 75, "\n", false);
+		$list = preg_replace('/^/m', $indent, $list);
+		return $list;
+	}
 
 	foreach ($nodes as $node_name => $node_info) {
 		sort($node_info['children']);
