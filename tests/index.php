@@ -10,13 +10,17 @@
 //--------------------------------------------------
 // Test
 
-	function test_path($id) {
-		return './' . str_pad(intval($id), 3, '0', STR_PAD_LEFT) . '.html';
+	function test_path($id, $ext = 'html') {
+		return './' . str_pad(intval($id), 3, '0', STR_PAD_LEFT) . '.' . $ext;
 	}
 
-	$test_path = test_path(isset($_GET['id']) ? $_GET['id'] : 0);
+	$test_id = intval(isset($_GET['id']) ? $_GET['id'] : 0);
+
+	$test_path = test_path($test_id);
+
 	if (!is_file($test_path)) {
-		$test_path = test_path(1);
+		$test_id = 1;
+		$test_path = test_path($test_id);
 	}
 
 	$test_html = file_get_contents($test_path);
@@ -42,5 +46,10 @@
 	}
 
 	echo $output;
+
+//--------------------------------------------------
+// Save
+
+	file_put_contents(test_path($test_id, 'txt'), $output);
 
 ?>

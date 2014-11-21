@@ -1,0 +1,15 @@
+
+	<textarea>123 <em>456</em> </textarea> <!-- Check whitespace -->
+	<span>AAA</span>
+	<span>BBB</span>
+
+--------------------------------------------------
+
+<textarea>123  </textarea> 
+	<span>AAA</span>
+	<span>BBB</span>
+
+--------------------------------------------------
+
+Cannot allow "em" as a child of "textarea".
+Cannot allow "span" as an alternative child for "em".

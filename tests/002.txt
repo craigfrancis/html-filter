@@ -1,0 +1,77 @@
+
+<div>
+
+	<address>
+		<p>Fish</p>
+		<span><nav>Hello</nav></span>
+		<address>Extra</address>
+	</address>
+
+	<form>
+		<fieldset>
+			<label>
+				One
+				<label>Two</label>
+				<span><label>Three</label></span>
+			</label>
+			<form>BBB</form>
+			<span><form>AAA</form></span>
+			<textarea>Value</textarea>
+			<span>Hi</span>
+		</fieldset>
+	</form>
+
+	<p>
+		<em>Testing</em>
+		<p>Another</p>
+	</p>
+
+	<p>A <!-- B --> C</p>
+
+</div>
+
+--------------------------------------------------
+
+<div>
+
+	<address>
+		<p>Fish</p>
+		<span><span>Hello</span></span>
+		<div>Extra</div>
+	</address>
+
+	<form>
+		<fieldset>
+			<label>
+				One
+				<span>Two</span>
+				<span><span>Three</span></span>
+			</label>
+			<div>BBB</div>
+			<span><span>AAA</span></span>
+			<textarea>Value</textarea>
+			<span>Hi</span>
+		</fieldset>
+	</form>
+
+	<p>
+		<em>Testing</em>
+		</p><p>Another</p>
+	
+
+	<p>A  C</p>
+
+</div>
+
+--------------------------------------------------
+
+LibXML Error: Tag nav invalid (line 6)
+LibXML Error: Unexpected end tag : p (line 27)
+Cannot allow "nav" as a child of "span".
+Cannot allow "div" as an alternative child for "nav".
+Cannot allow "address", as it has been excluded from a parent node.
+Cannot allow "label", as it has been excluded from a parent node.
+Cannot allow "label", as it has been excluded from a parent node.
+Cannot allow "form", as it has been excluded from a parent node.
+Cannot allow "form" as a child of "span".
+Cannot allow "div" as an alternative child for "form".

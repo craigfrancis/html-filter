@@ -1,0 +1,20 @@
+
+	<style> span {text-decoration: underline;} </style> <!-- Moves to <head> -->
+
+	<div>
+		<p>Hello <b>name</b>!</p>
+		<style> span {text-decoration: underline;} </style>
+	</div>
+
+--------------------------------------------------
+
+<div>
+		<p>Hello <strong>name</strong>!</p>
+		<span></span>
+	</div>
+
+--------------------------------------------------
+
+Cannot allow "#text" as a child of "head".
+Cannot allow "#text" as a child of "head".
+Cannot allow "style" as a child of "div".
