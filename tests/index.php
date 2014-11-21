@@ -1,22 +1,46 @@
 <?php
 
+//--------------------------------------------------
+// Setup
+
 	require_once('../html-filter.php');
 
 	header('Content-Type: text/plain; charset=UTF-8');
 
-	$html = '<div class="xxx">Hello <p class="a">Fish <br> End</div><div><a href="http://example.com" onclick="false">Link</a> Text</div>';
+//--------------------------------------------------
+// Test
 
-	echo $html . "\n\n";
+	function test_path($id) {
+		return './' . str_pad(intval($id), 3, '0', STR_PAD_LEFT) . '.html';
+	}
+
+	$test_path = test_path(isset($_GET['id']) ? $_GET['id'] : 0);
+	if (!is_file($test_path)) {
+		$test_path = test_path(1);
+	}
+
+	$test_html = file_get_contents($test_path);
+
+//--------------------------------------------------
+// Filter
 
 	$filter = new html_filter();
 	$filter->config_check();
 
-	$html = $filter->process($html);
+	$output_html = $filter->process($test_html);
 
-	echo $html . "\n\n";
+//--------------------------------------------------
+// Output
 
-	print_r($filter->errors_get());
+	$output  = rtrim($test_html) . "\n\n";
+	$output .= '--------------------------------------------------' . "\n\n";
+	$output .= rtrim($output_html) . "\n\n";
+	$output .= '--------------------------------------------------' . "\n\n";
 
-	exit();
+	foreach ($filter->errors_get() as $error) {
+		$output .= $error . "\n";
+	}
+
+	echo $output;
 
 ?>

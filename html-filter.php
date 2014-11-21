@@ -19,6 +19,7 @@
 				$this->config = array_merge(array(
 						'nodes' => dirname(__FILE__) . '/nodes/html5.php',
 						'unrecognised_node' => 'div',
+						'unrecognised_attribute' => NULL,
 					), $this->config, $config);
 
 			//--------------------------------------------------
@@ -49,10 +50,16 @@
 
 			foreach ($this->config['nodes'] as $node_name => $node_config) {
 
+				if (is_string($node_config)) {
+					continue;
+				}
+
 				if (!array_key_exists('void', $node_config))       exit('The node "' . $node_name . '" is missing the "void" boolean');
 				if (!is_bool($node_config['void']))                exit('The node "' . $node_name . '" has an invalid "void" boolean');
 				if (!array_key_exists('children', $node_config))   exit('The node "' . $node_name . '" is missing the "children" array');
 				if (!is_array($node_config['children']))           exit('The node "' . $node_name . '" has an invalid "children" array');
+				if (!array_key_exists('exclusions', $node_config))    exit('The node "' . $node_name . '" is missing the "exclude" array');
+				if (!is_array($node_config['exclusions']))            exit('The node "' . $node_name . '" has an invalid "exclude" array');
 				if (!array_key_exists('attributes', $node_config)) exit('The node "' . $node_name . '" is missing the "attributes" array');
 				if (!is_array($node_config['attributes']))         exit('The node "' . $node_name . '" has an invalid "attributes" array');
 
@@ -75,9 +82,18 @@
 			// Documents
 
 				$this->dom_src = new DOMDocument();
-				$this->dom_src->loadHTML($html);
-
 				$this->dom_dst = new DOMDocument();
+
+				libxml_use_internal_errors(true);
+				libxml_clear_errors();
+
+				$this->dom_src->loadHTML($html, LIBXML_NONET); // Disable net access, but also miraculously whitespace is preserved more often.
+
+				foreach (libxml_get_errors() as $error) {
+					$this->errors[] = 'LibXML Error: ' . trim($error->message) . ' (line ' . $error->line . ')';
+				}
+
+				libxml_clear_errors();
 
 			//--------------------------------------------------
 			// Copy nodes
@@ -88,7 +104,7 @@
 						continue;
 					}
 
-					$new = $this->process_node($node);
+					$new = $this->process_node(strtolower($node->nodeName), $node);
 					if ($new) {
 						$this->dom_dst->appendChild($new);
 					}
@@ -107,7 +123,7 @@
 				}
 
 				foreach ($this->config['nodes'] as $node_name => $node_config) {
-					if ($node_config['void']) {
+					if (is_array($node_config) && $node_config['void']) {
 						$output = str_ireplace('></' . $node_name . '>', ' />', $output);
 					}
 				}
@@ -119,12 +135,10 @@
 
 		}
 
-		protected function process_node($node_src) {
+		protected function process_node($node_name, $node_src, $node_exclusions = array()) {
 
 			//--------------------------------------------------
 			// Node type
-
-				$node_name = $node_src->nodeName;
 
 				if ($node_src->nodeType === XML_TEXT_NODE) {
 
@@ -143,6 +157,16 @@
 				}
 
 				$node_config = $this->config['nodes'][$node_name];
+
+				if (is_string($node_config)) {
+					$node_name = $node_config;
+					$node_config = $this->config['nodes'][$node_name];
+				}
+
+			//--------------------------------------------------
+			// Exclusions (e.g. a label cannot contain a label)
+
+				$node_exclusions = array_merge($node_exclusions, $node_config['exclusions']);
 
 			//--------------------------------------------------
 			// New
@@ -172,9 +196,13 @@
 
 							} else {
 
-								$attr_config = array('type' => NULL);
-
 								$this->errors[] = 'Unrecognised attribute "' . $attr_name . '" on node "' . $node_name . '"';
+
+								if ($this->config['unrecognised_attribute']) {
+									$attr_config = array('type' => $this->config['unrecognised_attribute']);
+								} else {
+									$attr_config = array('type' => NULL);
+								}
 
 							}
 
@@ -227,17 +255,62 @@
 				if ($node_src->hasChildNodes()) {
 					foreach ($node_src->childNodes as $child) {
 
-						if (!in_array($child->nodeName, $node_config['children'])) {
+						if ($child->nodeType === XML_CDATA_SECTION_NODE) {
+							continue; // Probably some CSS from a <style> tag... with nasty JS as well, e.g. background: url("javascript:alert('XSS')");
+						}
 
-							$this->errors[] = 'Cannot allow "' . $child->nodeName . '" as a child of "' . $node_name . '"';
+						if ($child->nodeType === XML_COMMENT_NODE) {
+							continue;
+						}
+
+						$child_name_lower = strtolower($child->nodeName);
+						$child_name_safe = NULL;
+
+						if (!in_array($child_name_lower, $node_config['children'])) {
+
+							$this->errors[] = 'Cannot allow "' . $child_name_lower . '" as a child of "' . $node_name . '".';
+
+						} else if (in_array($child_name_lower, $node_exclusions)) { // The ['exclusions'] allows nodes like <form> and <label> to not include any children of the same name, with no need to alter their ['children'] from a simple $categories['flow'].
+
+							$this->errors[] = 'Cannot allow "' . $child_name_lower . '", as it has been excluded from a parent node.';
 
 						} else {
 
-							$new = $this->process_node($child);
+							$child_name_safe = $child_name_lower;
+
+						}
+
+						if ($child_name_safe === NULL) {
+							if (isset($this->config['nodes'][$child_name_lower])) {
+
+								$child_name_alternative = $this->config['nodes'][$child_name_lower]['alternative']; // Allow the node to specify an appropriate alternative (e.g. span or div)
+
+								if (!in_array($child_name_alternative, $node_config['children']) || in_array($child_name_alternative, $node_exclusions)) {
+
+									$this->errors[] = 'Cannot allow "' . $child_name_alternative . '" as an alternative child for "' . $child_name_lower . '".';
+
+								} else {
+
+									$child_name_safe = $child_name_alternative;
+
+								}
+
+							}
+						}
+
+						if ($child_name_safe === NULL) { // Last ditch attempt to find something, but some nodes don't allow any children (e.g. <br />)
+							if (in_array('div', $node_config['children'])) {
+								$child_name_safe = 'div';
+							} else if (in_array('span', $node_config['children'])) {
+								$child_name_safe = 'span';
+							}
+						}
+
+						if ($child_name_safe !== NULL) {
+							$new = $this->process_node($child_name_safe, $child, $node_exclusions);
 							if ($new) {
 								$node_dst->appendChild($new);
 							}
-
 						}
 
 					}
